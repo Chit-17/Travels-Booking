@@ -1,0 +1,248 @@
+/* src/styles/auth.css */
+@import "./theme.css";
+
+*{ box-sizing:border-box; }
+body{ margin:0; font-family: Inter, system-ui, Arial, sans-serif; background: var(--bg); color: var(--text); }
+
+.authPage{
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(187,224,239,.85), transparent 55%),
+    radial-gradient(900px 500px at 90% 20%, rgba(255,152,106,.35), transparent 55%),
+    linear-gradient(180deg, #ffffff, #f5fbff);
+}
+
+.authGrid{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.authSide{
+  position: relative;
+  overflow: hidden;
+  background:
+    url("https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1600&q=60")
+    center/cover no-repeat;
+}
+
+.sideOverlay{
+  position:absolute; inset:0;
+  background: rgba(22, 30, 84, .72);
+}
+
+.sideContent{
+  position: relative;
+  padding: 48px;
+  color: rgba(255,255,255,.92);
+}
+
+.brandMark{
+  display:inline-block;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing:.2px;
+}
+
+.sideTag{ margin: 18px 0 10px; font-size: 28px; }
+.sideList{ margin: 12px 0 0; padding-left: 18px; opacity:.95; }
+
+.authMain{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+}
+
+.card{
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.brandRow{ display:flex; gap:12px; align-items:center; margin-bottom: 12px; }
+.logoDot{
+  width: 42px; height: 42px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--orange), var(--peach));
+}
+.appName{ font-weight: 800; color: var(--navy); }
+.trust{ font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+.head{ margin: 10px 0 12px; }
+.h1{ font-size: 22px; margin: 0; color: var(--navy); }
+.sub{ margin: 6px 0 0; color: var(--muted); }
+
+.tabs{
+  display:flex;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  gap: 6px;
+  margin-bottom: 12px;
+  background: rgba(187,224,239,.35);
+}
+.tab{
+  flex:1;
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor:pointer;
+  color: var(--navy);
+  font-weight: 650;
+}
+.tab.on{ background: #fff; border: 1px solid var(--border); }
+
+.roleField{ border: 0; padding: 0; margin: 0 0 12px; }
+.legend{ font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.roleSeg{
+  display:flex;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow:hidden;
+}
+.roleOpt{
+  flex:1; display:flex; justify-content:center; align-items:center;
+  padding: 10px 12px;
+  cursor:pointer;
+  gap:8px;
+  user-select:none;
+  background: #fff;
+  color: var(--navy);
+}
+.roleOpt input{ accent-color: var(--orange); }
+.roleOpt.on{ background: rgba(241,109,52,.10); }
+
+.form{ display:flex; flex-direction:column; gap: 12px; }
+
+.field{ display:flex; flex-direction:column; gap: 6px; }
+.label{ font-size: 12px; color: var(--muted); }
+.input, .select{
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  outline: none;
+}
+.input:focus, .select:focus{ border-color: rgba(241,109,52,.65); box-shadow: 0 0 0 4px rgba(241,109,52,.12); }
+.invalid{ border-color: rgba(180,35,24,.6) !important; }
+.error{ color: var(--danger); font-size: 12px; }
+
+.pwWrap{ display:flex; }
+.pwWrap .input{ border-top-right-radius: 0; border-bottom-right-radius: 0; flex: 1; }
+.pwBtn{
+  width: 72px;
+  border: 1px solid var(--border);
+  border-left: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: rgba(187,224,239,.25);
+  cursor:pointer;
+  color: var(--navy);
+  font-weight: 650;
+}
+.pwBtn:focus{ outline: none; box-shadow: 0 0 0 4px rgba(241,109,52,.12); }
+
+.rowBetween{ display:flex; justify-content:space-between; align-items:center; gap: 10px; }
+.check{ font-size: 13px; color: var(--navy); display:flex; gap:8px; align-items:center; }
+.link, .linkBtn{
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 650;
+}
+.linkBtn{ background: transparent; border: 0; cursor: pointer; padding: 0; text-align:left; }
+
+.btnPrimary{
+  height: 46px;
+  border-radius: 12px;
+  border: 0;
+  background: linear-gradient(135deg, var(--orange), var(--peach));
+  color: #fff;
+  font-weight: 750;
+  cursor:pointer;
+}
+.btnPrimary:disabled{ opacity:.7; cursor:not-allowed; }
+
+.divider{
+  position: relative;
+  text-align:center;
+  margin: 4px 0;
+}
+.divider::before{
+  content:"";
+  position:absolute; left:0; right:0; top:50%;
+  height: 1px; background: var(--border);
+}
+.divider span{
+  position: relative;
+  background: var(--card);
+  padding: 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.btnGhost{
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-weight: 750;
+  cursor:pointer;
+}
+
+.alert{
+  border: 1px solid rgba(180,35,24,.35);
+  background: rgba(180,35,24,.08);
+  color: #7a1a12;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.drop{
+  border: 1px dashed rgba(22,30,84,.35);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(187,224,239,.22);
+  position: relative;
+}
+.drop input[type="file"]{
+  width: 100%;
+  margin-top: 10px;
+}
+.dropTitle{ font-weight: 800; color: var(--navy); }
+.dropHint{ font-size: 12px; color: var(--muted); margin-top: 2px; }
+.fileList{ margin: 8px 0 0; padding-left: 18px; color: var(--navy); }
+.note{
+  font-size: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,152,106,.12);
+  color: var(--navy);
+}
+.footerLinks{ margin-top: 10px; display:flex; flex-direction:column; gap: 8px; }
+.tinyLinks{ font-size: 12px; color: var(--muted); display:flex; gap: 8px; align-items:center; }
+.dot{ opacity:.6; }
+.legal{ margin-top: 14px; font-size: 12px; color: var(--muted); }
+
+/* Fleet owner ownerType segmented buttons */
+.seg{ display:flex; border: 1px solid var(--border); border-radius: 12px; overflow:hidden; }
+.segBtn{
+  flex:1; padding: 10px 12px; border:0; background:#fff; cursor:pointer; font-weight:750; color: var(--navy);
+}
+.segBtn.on{ background: rgba(241,109,52,.10); }
+
+/* Mobile: full width card, hide side image */
+@media (max-width: 900px){
+  .authGrid{ grid-template-columns: 1fr; }
+  .authSide{ display:none; }
+  .authMain{ padding: 16px; align-items: stretch; }
+  .card{ max-width: none; width: 100%; border-radius: 16px; }
+}

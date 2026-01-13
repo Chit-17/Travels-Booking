@@ -1,0 +1,16 @@
+/* src/styles/theme.css */
+:root{
+  --sky: #BBE0EF;
+  --navy: #161E54;
+  --orange: #F16D34;
+  --peach: #FF986A;
+
+  --bg: #f7fbff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, .65);
+
+  --border: rgba(22, 30, 84, .18);
+  --danger: #b42318;
+  --shadow: 0 20px 60px rgba(22, 30, 84, .18);
+}
